@@ -1,0 +1,738 @@
+2026-03-27T05:23:14.665Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 11328 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T05:23:14.686Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T05:23:14.792Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T05:23:14.793Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T05:23:16.094Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T05:23:16.175Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 5 JPA repository interfaces.
+2026-03-27T05:23:17.129Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T05:23:17.143Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T05:23:17.144Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T05:23:17.197Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T05:23:17.198Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2404 ms
+2026-03-27T05:23:17.625Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T05:23:17.751Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T05:23:17.811Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T05:23:18.175Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T05:23:18.217Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T05:23:20.360Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@41dd2b25
+2026-03-27T05:23:20.361Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T05:23:20.668Z  WARN 11328 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T05:23:22.067Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T05:23:25.263Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T05:23:25.598Z ERROR 11328 --- [StudentManagement-Dev] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService': Error creating bean with name 'userDetailServiceImpl': Unsatisfied dependency expressed through field 'passwordEncoder': Error creating bean with name 'securityConfig' defined in file [C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes\com\example\demo\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtAuthenticationFilter': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2026-03-27T05:23:25.628Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-27T05:23:25.631Z  WARN 11328 --- [StudentManagement-Dev] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1763)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-27T05:23:25.632Z  WARN 11328 --- [StudentManagement-Dev] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/sun.nio.ch.Net.poll(Native Method)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:191)
+ java.base/sun.nio.ch.NioSocketImpl.park(NioSocketImpl.java:201)
+ java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:309)
+ java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+ java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+ java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+ org.postgresql.core.VisibleBufferedInputStream.readMore(VisibleBufferedInputStream.java:161)
+ org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:128)
+ org.postgresql.core.VisibleBufferedInputStream.ensureBytes(VisibleBufferedInputStream.java:113)
+ org.postgresql.core.VisibleBufferedInputStream.read(VisibleBufferedInputStream.java:73)
+ org.postgresql.core.PGStream.receiveChar(PGStream.java:465)
+ org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:678)
+ org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:203)
+ org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258)
+ org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+ org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263)
+ org.postgresql.Driver.makeConnection(Driver.java:443)
+ org.postgresql.Driver.connect(Driver.java:297)
+ com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+ com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+ com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+ com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:733)
+ com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+ java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+2026-03-27T05:23:25.634Z  WARN 11328 --- [StudentManagement-Dev] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-03-27T05:23:25.634Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T05:23:25.637Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T05:23:26.631Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T05:23:26.642Z  INFO 11328 --- [StudentManagement-Dev] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T05:23:26.667Z ERROR 11328 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌─────┐
+|  jwtAuthenticationFilter (field private org.springframework.security.core.userdetails.UserDetailsService com.example.demo.config.JwtAuthenticationFilter.userDetailsService)
+↑     ↓
+|  userDetailServiceImpl (field private org.springframework.security.crypto.password.PasswordEncoder com.example.demo.service.userDetailServiceImpl.passwordEncoder)
+↑     ↓
+|  securityConfig defined in file [C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes\com\example\demo\config\SecurityConfig.class]
+└─────┘
+
+
+Action:
+
+Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+
+2026-03-27T05:46:45.515Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 24216 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T05:46:45.519Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T05:46:45.563Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T05:46:45.563Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T05:46:46.540Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T05:46:46.612Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2026-03-27T05:46:47.349Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T05:46:47.364Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T05:46:47.365Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T05:46:47.423Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T05:46:47.423Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1859 ms
+2026-03-27T05:46:47.751Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T05:46:47.837Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T05:46:47.875Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T05:46:48.113Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T05:46:48.148Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T05:46:49.979Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2aef9e3f
+2026-03-27T05:46:49.980Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T05:46:50.263Z  WARN 24216 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T05:46:51.534Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T05:46:54.712Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T05:46:55.150Z  WARN 24216 --- [StudentManagement-Dev] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'loginController': Unsatisfied dependency expressed through field 'authenticationManager': No qualifying bean of type 'org.springframework.security.authentication.AuthenticationManager' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-03-27T05:46:55.151Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T05:46:55.155Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T05:46:55.211Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T05:46:55.214Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-03-27T05:46:55.230Z  INFO 24216 --- [StudentManagement-Dev] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T05:46:55.268Z ERROR 24216 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field authenticationManager in com.example.demo.controller.LoginController required a bean of type 'org.springframework.security.authentication.AuthenticationManager' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.authentication.AuthenticationManager' in your configuration.
+
+2026-03-27T05:52:38.377Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 13968 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T05:52:38.380Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T05:52:38.433Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T05:52:38.434Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T05:52:39.268Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T05:52:39.327Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 52 ms. Found 5 JPA repository interfaces.
+2026-03-27T05:52:39.960Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T05:52:39.971Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T05:52:39.972Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T05:52:40.015Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T05:52:40.015Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1580 ms
+2026-03-27T05:52:40.276Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T05:52:40.333Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T05:52:40.359Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T05:52:40.518Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T05:52:40.548Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T05:52:42.565Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34d875bb
+2026-03-27T05:52:42.567Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T05:52:42.889Z  WARN 13968 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T05:52:44.046Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T05:52:46.874Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T05:52:47.379Z  WARN 13968 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T05:52:47.829Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-27T05:52:47.886Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37173aed, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5e9fb221, org.springframework.security.web.context.SecurityContextHolderFilter@8ad618f, org.springframework.security.web.header.HeaderWriterFilter@32a8f835, org.springframework.web.filter.CorsFilter@7db472fc, org.springframework.security.web.authentication.logout.LogoutFilter@7fef3df2, com.example.demo.config.JwtAuthenticationFilter@7a672339, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@249a8a03, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ebd54c2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6524953e, org.springframework.security.web.access.ExceptionTranslationFilter@593bd0a2, org.springframework.security.web.access.intercept.AuthorizationFilter@3e0e6b0b]
+2026-03-27T05:52:48.440Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-27T05:52:48.519Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-27T05:52:48.534Z  INFO 13968 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Started StudentManagementApplication in 10.521 seconds (process running for 11.306)
+2026-03-27T05:52:49.228Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T05:52:49.229Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T05:52:49.230Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-27T05:52:51.312Z  WARN 13968 --- [StudentManagement-Dev] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=StudentManagement-Dev, managementUrl=http://student-m-team6-app:8080/actuator, healthUrl=http://student-m-team6-app:8080/actuator/health, serviceUrl=http://student-m-team6-app:8080) at spring-boot-admin ([http://sb-admin:8080/instances]): I/O error on POST request for "http://sb-admin:8080/instances": sb-admin. Further attempts are logged on DEBUG level
+2026-03-27T06:04:59.034Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(24)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-27T06:04:59.052Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(24)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T06:04:59.056Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T06:04:59.060Z  INFO 13968 --- [StudentManagement-Dev] [RMI TCP Connection(24)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T06:05:01.597Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 17724 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T06:05:01.599Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T06:05:01.636Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T06:05:01.636Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T06:05:02.462Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T06:05:02.519Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+2026-03-27T06:05:03.157Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T06:05:03.167Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T06:05:03.167Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T06:05:03.214Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T06:05:03.214Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1577 ms
+2026-03-27T06:05:03.519Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T06:05:03.583Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T06:05:03.619Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T06:05:03.805Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T06:05:03.837Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T06:05:05.909Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2f99533f
+2026-03-27T06:05:05.911Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T06:05:06.317Z  WARN 17724 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T06:05:07.446Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T06:05:13.930Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T06:05:14.485Z  WARN 17724 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T06:05:14.911Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-27T06:05:14.964Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a0c4094, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@37173aed, org.springframework.security.web.context.SecurityContextHolderFilter@5640c017, org.springframework.security.web.header.HeaderWriterFilter@49d893af, org.springframework.web.filter.CorsFilter@5e9fb221, org.springframework.security.web.authentication.logout.LogoutFilter@64cefc91, com.example.demo.config.JwtAuthenticationFilter@645b63c9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@47d83a6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@283000e0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7db472fc, org.springframework.security.web.access.ExceptionTranslationFilter@1f112edf, org.springframework.security.web.access.intercept.AuthorizationFilter@d4c2f5c]
+2026-03-27T06:05:15.386Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-27T06:05:15.457Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-27T06:05:15.469Z  INFO 17724 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Started StudentManagementApplication in 14.168 seconds (process running for 14.868)
+2026-03-27T06:05:16.023Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(9)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T06:05:16.024Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T06:05:16.026Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(9)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-27T06:05:18.228Z  WARN 17724 --- [StudentManagement-Dev] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=StudentManagement-Dev, managementUrl=http://student-m-team6-app:8080/actuator, healthUrl=http://student-m-team6-app:8080/actuator/health, serviceUrl=http://student-m-team6-app:8080) at spring-boot-admin ([http://sb-admin:8080/instances]): I/O error on POST request for "http://sb-admin:8080/instances": sb-admin. Further attempts are logged on DEBUG level
+2026-03-27T06:47:01.319Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(52)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-27T06:47:01.344Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(52)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T06:47:01.351Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(52)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T06:47:01.353Z  INFO 17724 --- [StudentManagement-Dev] [RMI TCP Connection(52)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T06:47:04.296Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 26348 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T06:47:04.298Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T06:47:04.339Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T06:47:04.339Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T06:47:05.225Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T06:47:05.290Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2026-03-27T06:47:06.030Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T06:47:06.042Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T06:47:06.042Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T06:47:06.099Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T06:47:06.100Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1760 ms
+2026-03-27T06:47:06.419Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T06:47:06.506Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T06:47:06.548Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T06:47:06.765Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T06:47:06.799Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T06:47:17.852Z ERROR 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
+
+org.postgresql.util.PSQLException: The connection attempt failed.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:354) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:263) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.Driver.makeConnection(Driver.java:443) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.Driver.connect(Driver.java:297) ~[postgresql-42.6.2.jar:42.6.2]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100) ~[HikariCP-5.0.1.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) ~[HikariCP-5.0.1.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:428) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1685) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4880) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.demo.StudentManagementApplication.main(StudentManagementApplication.java:15) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:243) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.PGStream.<init>(PGStream.java:98) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:132) ~[postgresql-42.6.2.jar:42.6.2]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:258) ~[postgresql-42.6.2.jar:42.6.2]
+	... 138 common frames omitted
+
+2026-03-27T06:47:17.865Z  WARN 26348 --- [StudentManagement-Dev] [restartedMain] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+java.lang.NullPointerException: Cannot invoke "org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(java.sql.SQLException, String)" because the return value of "org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.sqlExceptionHelper()" is null
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:276) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1432) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1503) ~[hibernate-core-6.4.4.Final.jar:6.4.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:682) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:509) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1685) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:784) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:508) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1419) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:210) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:173) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:168) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:153) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:266) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:240) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4880) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:845) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:240) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:437) ~[tomcat-embed-core-10.1.20.jar:10.1.20]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:105) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:499) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:218) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:188) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:618) ~[spring-context-6.1.6.jar:6.1.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-3.2.5.jar:3.2.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) ~[spring-boot-3.2.5.jar:3.2.5]
+	at com.example.demo.StudentManagementApplication.main(StudentManagementApplication.java:15) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.2.5.jar:3.2.5]
+
+2026-03-27T06:47:17.891Z  WARN 26348 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T06:47:19.105Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T06:47:19.132Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T06:47:21.699Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6ff6e3ea
+2026-03-27T06:47:21.704Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T06:47:36.504Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T06:47:37.267Z  WARN 26348 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T06:47:37.883Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-27T06:47:37.956Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@681547d2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@730eea4d, org.springframework.security.web.context.SecurityContextHolderFilter@596ad740, org.springframework.security.web.header.HeaderWriterFilter@aedb733, org.springframework.web.filter.CorsFilter@7d241985, org.springframework.security.web.authentication.logout.LogoutFilter@7d26a2f2, com.example.demo.config.JwtAuthenticationFilter@c4e0489, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f758d9f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@49c07495, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3fa10d3, org.springframework.security.web.access.ExceptionTranslationFilter@5df7627d, org.springframework.security.web.access.intercept.AuthorizationFilter@470c3539]
+2026-03-27T06:47:38.586Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-27T06:47:38.693Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-27T06:47:38.711Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Started StudentManagementApplication in 34.727 seconds (process running for 35.546)
+2026-03-27T06:47:39.037Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(6)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T06:47:39.037Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T06:47:39.041Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(6)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-03-27T06:47:41.558Z  WARN 26348 --- [StudentManagement-Dev] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=StudentManagement-Dev, managementUrl=http://student-m-team6-app:8080/actuator, healthUrl=http://student-m-team6-app:8080/actuator/health, serviceUrl=http://student-m-team6-app:8080) at spring-boot-admin ([http://sb-admin:8080/instances]): I/O error on POST request for "http://sb-admin:8080/instances": sb-admin. Further attempts are logged on DEBUG level
+2026-03-27T07:25:50.740Z  WARN 26348 --- [StudentManagement-Dev] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=27m58s717ms401µs500ns).
+2026-03-27T07:39:24.716Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@732a91bf (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.132Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@4c2a1b68 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.212Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@20b68ccd (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.308Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@7b6560d (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.610Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@20d19b7c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.706Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@3cbc2555 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.814Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@287816eb (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:25.912Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1dcb2bd7 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:26.213Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@31ed4969 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:39:26.308Z  WARN 26348 --- [StudentManagement-Dev] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6ca6448c (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-27T07:41:55.770Z  INFO 26348 --- [StudentManagement-Dev] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 52 class path changes (0 additions, 5 deletions, 47 modifications)
+2026-03-27T07:41:56.129Z  INFO 26348 --- [StudentManagement-Dev] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T07:41:56.135Z  INFO 26348 --- [StudentManagement-Dev] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T07:41:56.209Z  INFO 26348 --- [StudentManagement-Dev] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T07:42:04.791Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 26348 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T07:42:04.791Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T07:42:08.315Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T07:42:08.380Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 5 JPA repository interfaces.
+2026-03-27T07:42:09.072Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T07:42:09.077Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T07:42:09.090Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T07:42:09.155Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T07:42:09.155Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4361 ms
+2026-03-27T07:42:10.055Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T07:42:10.103Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T07:42:10.250Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T07:42:10.253Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-03-27T07:42:13.002Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 28128 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T07:42:13.004Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T07:42:13.063Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T07:42:13.063Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T07:42:14.154Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@1a1fe27e
+2026-03-27T07:42:14.154Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-03-27T07:42:14.400Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T07:42:14.489Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+2026-03-27T07:42:14.854Z  WARN 26348 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T07:42:15.324Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T07:42:15.334Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T07:42:15.335Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T07:42:15.381Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T07:42:15.382Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2318 ms
+2026-03-27T07:42:15.666Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T07:42:15.770Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T07:42:15.862Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T07:42:15.902Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T07:42:16.118Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T07:42:16.149Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T07:42:18.986Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5983c065
+2026-03-27T07:42:18.988Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T07:42:19.436Z  WARN 28128 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T07:42:19.625Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T07:42:19.871Z  WARN 26348 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T07:42:20.239Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-27T07:42:20.285Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@36e6a543, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fe7e368, org.springframework.security.web.context.SecurityContextHolderFilter@774de85b, org.springframework.security.web.header.HeaderWriterFilter@4eb7478c, org.springframework.web.filter.CorsFilter@5c6eb6f4, org.springframework.security.web.authentication.logout.LogoutFilter@1bd28ac8, com.example.demo.config.JwtAuthenticationFilter@c52da57, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6e4b9e59, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b495879, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@454698c4, org.springframework.security.web.access.ExceptionTranslationFilter@2bd0f9ab, org.springframework.security.web.access.intercept.AuthorizationFilter@b7e40cf]
+2026-03-27T07:42:20.649Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-27T07:42:20.674Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-27T07:42:20.693Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Started StudentManagementApplication in 17.12 seconds (process running for 3317.526)
+2026-03-27T07:42:20.697Z  INFO 26348 --- [StudentManagement-Dev] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-03-27T07:42:20.975Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T07:42:23.403Z  WARN 26348 --- [StudentManagement-Dev] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=StudentManagement-Dev, managementUrl=http://student-m-team6-app:8080/actuator, healthUrl=http://student-m-team6-app:8080/actuator/health, serviceUrl=http://student-m-team6-app:8080) at spring-boot-admin ([http://sb-admin:8080/instances]): I/O error on POST request for "http://sb-admin:8080/instances": sb-admin. Further attempts are logged on DEBUG level
+2026-03-27T07:42:30.074Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T07:42:30.727Z  WARN 28128 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T07:42:31.226Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-27T07:42:31.289Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@18ccc6f2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38228492, org.springframework.security.web.context.SecurityContextHolderFilter@78380730, org.springframework.security.web.header.HeaderWriterFilter@51ec558f, org.springframework.web.filter.CorsFilter@184116d9, org.springframework.security.web.authentication.logout.LogoutFilter@5f17b068, com.example.demo.config.JwtAuthenticationFilter@270d5ede, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b1c21b6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31aa1633, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4858f0b0, org.springframework.security.web.access.ExceptionTranslationFilter@4de97b6, org.springframework.security.web.access.intercept.AuthorizationFilter@ba3b250]
+2026-03-27T07:42:31.738Z  WARN 28128 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-03-27T07:42:31.820Z  WARN 28128 --- [StudentManagement-Dev] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-27T07:42:31.838Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T07:42:31.842Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-27T07:42:32.908Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-27T07:42:32.924Z  INFO 28128 --- [StudentManagement-Dev] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-27T07:42:32.940Z ERROR 28128 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-03-27T07:42:54.236Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(45)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2026-03-27T07:42:54.250Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(45)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T07:42:54.252Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(45)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-03-27T07:42:54.257Z  INFO 26348 --- [StudentManagement-Dev] [RMI TCP Connection(45)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-03-27T07:44:11.210Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 21.0.8 with PID 25712 (C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by Damini in C:\Users\Damini\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-27T07:44:11.212Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-27T07:44:11.311Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-27T07:44:11.312Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-27T07:44:12.290Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-27T07:44:12.357Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 58 ms. Found 5 JPA repository interfaces.
+2026-03-27T07:44:13.053Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-27T07:44:13.063Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-27T07:44:13.063Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-27T07:44:13.120Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-27T07:44:13.120Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1807 ms
+2026-03-27T07:44:13.519Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-27T07:44:13.599Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-27T07:44:13.647Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-27T07:44:13.871Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-27T07:44:13.904Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-27T07:44:16.119Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48385d6f
+2026-03-27T07:44:16.121Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-27T07:44:16.440Z  WARN 25712 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-27T07:44:17.685Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-27T07:44:20.931Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-27T07:44:21.449Z  WARN 25712 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-27T07:44:21.920Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-27T07:44:21.993Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e33546, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f5cf1e, org.springframework.security.web.context.SecurityContextHolderFilter@6e30db7e, org.springframework.security.web.header.HeaderWriterFilter@41ac14db, org.springframework.web.filter.CorsFilter@14397974, org.springframework.security.web.authentication.logout.LogoutFilter@677c89e5, com.example.demo.config.JwtAuthenticationFilter@422c1161, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1e186dd2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60a51e95, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@758b7b2a, org.springframework.security.web.access.ExceptionTranslationFilter@763403c0, org.springframework.security.web.access.intercept.AuthorizationFilter@29d69cf1]
+2026-03-27T07:44:22.437Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-27T07:44:22.501Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-27T07:44:22.513Z  INFO 25712 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Started StudentManagementApplication in 11.676 seconds (process running for 12.811)
+2026-03-27T07:44:22.893Z  INFO 25712 --- [StudentManagement-Dev] [RMI TCP Connection(8)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-27T07:44:22.893Z  INFO 25712 --- [StudentManagement-Dev] [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-27T07:44:22.894Z  INFO 25712 --- [StudentManagement-Dev] [RMI TCP Connection(8)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-03-27T07:44:25.543Z  WARN 25712 --- [StudentManagement-Dev] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=StudentManagement-Dev, managementUrl=http://student-m-team6-app:8080/actuator, healthUrl=http://student-m-team6-app:8080/actuator/health, serviceUrl=http://student-m-team6-app:8080) at spring-boot-admin ([http://sb-admin:8080/instances]): I/O error on POST request for "http://sb-admin:8080/instances": sb-admin. Further attempts are logged on DEBUG level
+2026-03-27T07:54:53.729Z  WARN 25712 --- [StudentManagement-Dev] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m7s428ms659µs700ns).
+<<<<<<< HEAD
+2026-03-28T16:05:08.039Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 17.0.7 with PID 83600 (C:\Users\admin\Desktop\student_m\Team-6\StudentManagement\target\classes started by admin in C:\Users\admin\Desktop\student_m\Team-6\StudentManagement)
+2026-03-28T16:05:08.044Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-28T16:05:08.153Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-28T16:05:08.154Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-28T16:05:10.398Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-28T16:05:10.514Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
+2026-03-28T16:05:11.735Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-28T16:05:11.756Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-28T16:05:11.757Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-28T16:05:11.904Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-28T16:05:11.905Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3749 ms
+2026-03-28T16:05:12.393Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28T16:05:12.510Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-28T16:05:12.575Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-28T16:05:13.008Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-28T16:05:13.063Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-28T16:05:14.507Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c9f3db2
+2026-03-28T16:05:14.509Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-28T16:05:14.752Z  WARN 83600 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-28T16:05:16.481Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-28T16:05:18.515Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28T16:05:19.411Z  WARN 83600 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-28T16:05:20.190Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-28T16:05:20.282Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@552eca5f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c899c60, org.springframework.security.web.context.SecurityContextHolderFilter@38845e04, org.springframework.security.web.header.HeaderWriterFilter@fee3e13, org.springframework.web.filter.CorsFilter@6066b4a5, org.springframework.security.web.authentication.logout.LogoutFilter@378b228, com.example.demo.config.JwtAuthenticationFilter@7d25b37d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a36792e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15dcf8fa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@52e31ca8, org.springframework.security.web.access.ExceptionTranslationFilter@53bede78, org.springframework.security.web.access.intercept.AuthorizationFilter@71c9de66]
+2026-03-28T16:05:20.920Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-28T16:05:21.010Z  WARN 83600 --- [StudentManagement-Dev] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-03-28T16:05:21.015Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28T16:05:21.019Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-03-28T16:05:21.068Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-03-28T16:05:21.103Z  INFO 83600 --- [StudentManagement-Dev] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-28T16:05:21.131Z ERROR 83600 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+=======
+2026-03-28T04:57:03.188Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Starting StudentManagementApplication using Java 17.0.12 with PID 26792 (C:\Users\VANITA\OneDrive\Desktop\Team-6\StudentManagement\target\classes started by VANITA in C:\Users\VANITA\OneDrive\Desktop\Team-6\StudentManagement)
+2026-03-28T04:57:03.201Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-28T04:57:03.469Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-28T04:57:03.470Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-28T04:57:07.319Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-28T04:57:07.517Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 184 ms. Found 5 JPA repository interfaces.
+2026-03-28T04:57:09.250Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-28T04:57:09.268Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-28T04:57:09.269Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-03-28T04:57:09.393Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-28T04:57:09.394Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5922 ms
+2026-03-28T04:57:09.938Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-28T04:57:10.072Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-28T04:57:10.164Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-28T04:57:10.706Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-28T04:57:10.768Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-28T04:57:13.127Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a4861ae
+2026-03-28T04:57:13.130Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-28T04:57:13.446Z  WARN 26792 --- [StudentManagement-Dev] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-28T04:57:15.640Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-28T04:57:18.662Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-28T04:57:19.537Z  WARN 26792 --- [StudentManagement-Dev] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-28T04:57:20.321Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2026-03-28T04:57:20.444Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@679bea9e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@564252ad, org.springframework.security.web.context.SecurityContextHolderFilter@36a26f1a, org.springframework.security.web.header.HeaderWriterFilter@4097ede7, org.springframework.web.filter.CorsFilter@446ecc76, org.springframework.security.web.authentication.logout.LogoutFilter@72c1dc1f, com.example.demo.config.JwtAuthenticationFilter@3a3afc6c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@398c438c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1010c2ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@14225246, org.springframework.security.web.access.ExceptionTranslationFilter@3771a612, org.springframework.security.web.access.intercept.AuthorizationFilter@58105b9b]
+2026-03-28T04:57:21.478Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-28T04:57:21.660Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-28T04:57:21.702Z  INFO 26792 --- [StudentManagement-Dev] [restartedMain] c.e.demo.StudentManagementApplication    : Started StudentManagementApplication in 20.384 seconds (process running for 22.83)
+2026-03-28T04:57:22.345Z  INFO 26792 --- [StudentManagement-Dev] [RMI TCP Connection(4)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-28T04:57:22.346Z  INFO 26792 --- [StudentManagement-Dev] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-28T04:57:22.350Z  INFO 26792 --- [StudentManagement-Dev] [RMI TCP Connection(4)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-03-28T04:57:24.556Z  WARN 26792 --- [StudentManagement-Dev] [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=StudentManagement-Dev, managementUrl=http://student-m-team6-app:8080/actuator, healthUrl=http://student-m-team6-app:8080/actuator/health, serviceUrl=http://student-m-team6-app:8080) at spring-boot-admin ([http://sb-admin:8080/instances]): I/O error on POST request for "http://sb-admin:8080/instances": sb-admin. Further attempts are logged on DEBUG level
+2026-03-28T05:08:27.840Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@a4861ae (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:27.928Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@1830cea4 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:27.972Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@599d8b42 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.010Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@779b8eef (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.078Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2d766fd0 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.153Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@332dc134 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.204Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@65f9b88 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.268Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@2d98915a (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.379Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@330e63d6 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:08:28.489Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-8] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Failed to validate connection org.postgresql.jdbc.PgConnection@6e7720e2 (This connection has been closed.). Possibly consider using a shorter maxLifetime value.
+2026-03-28T05:10:34.994Z  WARN 26792 --- [StudentManagement-Dev] [http-nio-8080-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [java.lang.RuntimeException: Trainer not found]
+>>>>>>> c9c10d3b9e3438281cbb9dbb437bc4f52e972e08
